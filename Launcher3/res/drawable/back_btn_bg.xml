@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 	返回按钮的的背景效果设定
+ -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按下状态时的效果 -->
+    <item android:drawable="@drawable/back_button_press" android:state_pressed="true"/>
+    <!-- 如果是双列表显示就还有个,选中状态效果 -->
+    <item android:drawable="@drawable/back_button_press" android:state_selected="true"/>
+    <!-- 默认状态下的显示效果 -->
+    <item android:drawable="@drawable/back_button_default"/>
+
+</selector>

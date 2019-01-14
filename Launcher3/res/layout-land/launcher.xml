@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res/cn.netin.launcher"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <cn.netin.launcher.Workspace
+        android:id="@+id/workspace"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        launcher:defaultScreen="0" >
+
+      </cn.netin.launcher.Workspace>
+
+    <RelativeLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/bg_frame_land" >
+
+        <ImageView
+            android:id="@+id/logoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="15dp"
+            android:onClick="handleClick"
+            android:padding="0dp"
+            android:src="@drawable/logo" />
+        
+        <ImageView
+            android:id="@+id/avatarView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:onClick="handleClick"
+            android:padding="4dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_avatar_frame"
+             />
+        
+        <TextView
+            android:id="@+id/kids_name"
+            style="@style/h1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/avatarView" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:onClick="handleClick"
+            android:src="@drawable/back_btn_selector" />
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/backButton"
+            android:background="@null"
+            android:onClick="handleClick"
+            android:src="@drawable/menu_btn_selector" />
+
+        <ImageView
+            android:id="@+id/batteryView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/menuButton"
+            android:src="@drawable/battery5" />
+
+        <ImageView
+            android:id="@+id/wifiView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/batteryView"
+            android:onClick="handleClick"
+            android:src="@drawable/wifi0" />
+
+        <TextView
+            android:id="@+id/categoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="#FFF"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/timeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/wifiView"
+            android:text="00:00"
+            android:textColor="#FFF"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+    <cn.netin.launcher.WorkspaceIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        launcher:workspaceCount="2" />
+
+</FrameLayout>

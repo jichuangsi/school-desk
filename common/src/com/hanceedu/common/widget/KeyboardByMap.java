@@ -1,0 +1,129 @@
+package com.hanceedu.common.widget;
+
+
+import com.hanceedu.common.R;
+
+import android.app.Dialog;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.TextView;
+
+/**
+ * 使用自定义dialog作为容器实现虚拟键盘展示及相应功能
+ * 
+ * 该虚拟键盘采用贴图模式实现按键效果--及不使用android自带的button控件来实现虚拟键盘的按钮
+ * 而是采用贴图方式,通过判断贴图的坐标来判定点击的按键,同时完成该按键对应的事件.
+ * 
+ * 按钮的高亮效果同样采取贴图方式,当点击的区域判定为该按键则在该区域显示高亮图片同时通过注册的 cilckListerner实现点击事件
+ * 
+ * @author ben.upsilon@gmail.com
+ * @date 2011-9-22
+ * @~ com.hanceedu.common.widget//KeyboardByWidget
+ */
+public class KeyboardByMap extends Dialog {
+
+	public interface OnKeyboardClickListener {
+		void onOk(int page);
+
+		void onCancel();
+	}
+
+	private OnKeyboardClickListener onKeyboardClickListener;
+
+	/** 虚拟键盘中的虚拟显示界面 */
+	private TextView pageOutputer;
+
+	/** 存储虚拟键盘显示的内容及输出的内容 */
+	private StringBuffer str = new StringBuffer();
+
+	/** 该虚拟键盘输入的最大值 */
+	private int maxNum;
+
+	/** 自定义键盘对象 */
+	private Keys keyboard;
+
+	/**
+	 * 自定义dialog初始化 显示前被调用
+	 */
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.page_board);
+		// 自xml获取控件对象
+		keyboard = (Keys) findViewById(R.id.key1);
+		pageOutputer = (TextView) findViewById(R.id.pageNum);
+
+		// 实现keys的click事件
+		keyboard.setOnClickListener(new Keys.OnClickListener() {
+			public void onClick(String ch) {
+				if (ch.equalsIgnoreCase("enter")) {
+					if (str.length() != 0)
+						onKeyboardClickListener.onOk(Integer.parseInt(str
+								.toString()));
+				}
+				if (ch.equalsIgnoreCase("delete")) {
+					if (str.length() != 0) {
+						str.deleteCharAt(str.length() - 1);
+						pageOutputer.setText(str);
+					}
+				}
+				if (ch.equalsIgnoreCase("cancel")) {
+					str.delete(0, str.length());
+					pageOutputer.setText("");
+					onKeyboardClickListener.onCancel();
+				}
+				if (ch.matches("\\d")) {
+					str.append(ch);
+					if (Integer.parseInt(str.toString()) < 1) {
+						str = new StringBuffer();
+					}
+					pageOutputer.setText(str);
+				}
+			}
+		});
+
+		// 添加输出控制监听器,这里主要实现功能是:控制用户输入的数字不能超过传递来的最大值
+		pageOutputer.addTextChangedListener(new TextWatcher() {
+			public void afterTextChanged(Editable s) {
+			}
+
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				if (!s.toString().equals("")) {
+					if (Integer.parseInt(s.toString()) > maxNum) {
+						str = new StringBuffer(maxNum + "");
+						pageOutputer.setText(str);
+					}
+					if (Integer.parseInt(s.toString()) < 1) {
+						pageOutputer.setText(1 + "");
+					}
+				}
+			}
+		});
+
+	}
+
+	/**
+	 * 初始化方法
+	 * 设置改dialog的style以及输出控制的最大值
+	 * @param context
+	 * @param total
+	 */
+	public KeyboardByMap(Context context, int total) {
+		super(context, R.style.NumpadDialog);
+		this.maxNum = total;
+
+	}
+
+	public void setOnKeyboardClickListener(
+			OnKeyboardClickListener keyboardClickListener) {
+		this.onKeyboardClickListener = keyboardClickListener;
+	}
+
+}

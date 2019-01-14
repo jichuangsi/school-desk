@@ -1,0 +1,46 @@
+# view AndroidManifest.xml #generated:43
+-keep class cn.netin.parentalcontrol.AppManagerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:17
+-keep class cn.netin.parentalcontrol.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:24
+-keep class cn.netin.parentalcontrol.PasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:36
+-keep class cn.netin.parentalcontrol.ProtectionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:54
+-keep class cn.netin.parentalcontrol.RestTimeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class cn.netin.parentalcontrol.UsageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:60
+-keep class cn.netin.parentalcontrol.WebAccessActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:12
+-keep class com.hanceedu.common.HanceApplication { <init>(...); }
+
+# view res/layout/page_board.xml #generated:5
+-keep class com.hanceedu.common.widget.Keys { <init>(...); }
+
+# view res/layout/page_pageable_activity.xml #generated:5
+-keep class com.hanceedu.common.widget.PageControl { <init>(...); }
+
+# onClick hdpi-v4\res/layout-hdpi-v4/main.xml #generated:21
+# onClick port\res/layout-port/usage.xml #generated:18
+# onClick res/layout/act_rest_time.xml #generated:24
+# onClick res/layout/app_manager.xml #generated:103
+# onClick res/layout/app_manager.xml #generated:22
+# onClick res/layout/app_manager.xml #generated:94
+# onClick res/layout/main.xml #generated:21
+# onClick res/layout/password.xml #generated:28
+# onClick res/layout/password.xml #generated:62
+# onClick res/layout/protection.xml #generated:24
+# onClick res/layout/url_item.xml #generated:18
+# onClick res/layout/usage.xml #generated:18
+# onClick res/layout/web.xml #generated:24
+# onClick res/layout/web.xml #generated:98
+-keepclassmembers class * { *** handleClick(...); }
+

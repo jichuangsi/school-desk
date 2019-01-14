@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="NumpadDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- page_pageable_activity布局文件的style -->
+    <style name="pageable_wrapper">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="pageable_header">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- page_bar布局文件的style -->
+    <style name="page_bar_header">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center|center_horizontal</item>
+        <item name="android:background">@drawable/page_background</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:weightSum">1</item>
+    </style>
+
+    <style name="page_bar_btn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="header_first_btn" parent="page_bar_btn">
+        <item name="android:background">@drawable/page_first_btn</item>
+    </style>
+
+    <style name="header_previous_btn" parent="page_bar_btn">
+        <item name="android:background">@drawable/page_previous_btn</item>
+    </style>
+
+    <style name="header_next_btn" parent="page_bar_btn">
+        <item name="android:background">@drawable/page_next_btn</item>
+    </style>
+
+    <style name="header_last_btn" parent="page_bar_btn">
+        <item name="android:background">@drawable/page_last_btn</item>
+    </style>
+
+    <style name="header_number_text">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:background">@drawable/page_number_text</item>
+    </style>
+
+    <!-- page_board布局文件的style -->
+    <style name="page_board_wrapper">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">506dp</item>
+        <item name="android:layout_height">102dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/page_numpad</item>
+    </style>
+
+    <style name="page_board_keys">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="page_board_text">
+        <item name="android:layout_width">380dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_marginLeft">28dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <!-- page_numpad布局文件的style -->
+    <style name="numpad_btn_common" parent="numpad_common">
+        <item name="android:layout_weight">1</item>
+        <item name="android:editable">false</item>
+    </style>
+
+    <style name="numpad_wrapper" parent="pageable_wrapper">
+        <item name="android:layout_gravity">center|center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/page_background</item>
+    </style>
+
+    <style name="numpad_trunk">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="numpad_trunk_top" parent="numpad_trunk">
+        <item name="android:paddingTop">3dip</item>
+    </style>
+
+    <style name="numpad_editPageNum">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="numpad_common">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:onClick">bindClick</item>
+    </style>
+
+    <style name="numpad_del_btn" parent="numpad_common">
+        <item name="android:src">@drawable/page_btn_numpad_del_src</item>
+    </style>
+
+</resources>

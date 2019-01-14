@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<keyboard>
+	<key
+		id="1"
+		x="17"
+		y="49"
+		w="41"
+		h="41"
+		sourceId="page_numpad_1" />
+	<key
+		id="2"
+		x="57"
+		y="49"
+		w="41"
+		h="41"
+		sourceId="page_numpad_2" />
+	<key
+		id="3"
+		x="97"
+		y="49"
+		w="41"
+		h="41"
+		sourceId="page_numpad_3" />
+	<key
+		id="4"
+		x="137"
+		y="49"
+		w="41"
+		h="41"
+		sourceId="page_numpad_4" />
+	<key
+		id="5"
+		x="179"
+		y="49"
+		w="41"
+		h="41"
+		sourceId="page_numpad_5" />
+	<key
+		id="6"
+		x="220"
+		y="49"
+		w="41"
+		h="41"
+		sourceId="page_numpad_6" />
+	<key
+		id="7"
+		x="260"
+		y="49"
+		w="41"
+		h="41"
+		sourceId="page_numpad_7" />
+	<key
+		id="8"
+		x="300"
+		y="49"
+		w="41"
+		h="41"
+		sourceId="page_numpad_8" />
+	<key
+		id="9"
+		x="341"
+		y="49"
+		w="41"
+		h="41"
+		sourceId="page_numpad_9" />
+	<key
+		id="0"
+		x="381"
+		y="49"
+		w="41"
+		h="41"
+		sourceId="page_numpad_0" />
+	<key
+		id="enter"
+		x="422"
+		y="52"
+		w="67"
+		h="41"
+		sourceId="page_numpad_enter" />
+	<key
+		id="delete"
+		x="399"
+		y="12"
+		w="48"
+		h="38"
+		sourceId="page_numpad_del" />
+	<key
+		id="cancel"
+		x="449"
+		y="10"
+		w="38"
+		h="38"
+		sourceId="page_numpad_cancel" />
+</keyboard>

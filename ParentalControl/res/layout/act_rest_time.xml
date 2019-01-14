@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_cloud"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/h1_pc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="@string/play_limit" />
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:onClick="handleClick"
+            android:src="@drawable/button_close" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/playTimeSwitchLayout"
+                android:layout_width="460dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/hd_grey"
+                android:orientation="horizontal" >
+
+                <ToggleButton
+                    android:id="@+id/playTimeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/button_switch"
+                    android:checked="false"
+                    android:gravity="center_horizontal"
+                    android:textOff=""
+                    android:textOn="" />
+
+                <TextView
+                    android:id="@+id/playTimeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/play_time_limit" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/playTimeLayout"
+                android:layout_width="460dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/hd_grey_start"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/max_play_time" />
+
+                <SeekBar
+                    android:id="@+id/sb_play_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:progressDrawable="@drawable/seekbar"
+                    android:thumb="@drawable/seekbar_thumb" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/restTimeLayout"
+                android:layout_width="460dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hd_grey_end"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/restTimeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rest_time" />
+
+                <SeekBar
+                    android:id="@+id/restTimeSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:progressDrawable="@drawable/seekbar30"
+                    android:thumb="@drawable/seekbar_thumb" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/playPeriodSwitchLayout"
+                android:layout_width="460dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/hd_grey"
+                android:orientation="horizontal" >
+
+                <ToggleButton
+                    android:id="@+id/playPeriodSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/button_switch"
+                    android:checked="false"
+                    android:gravity="center_horizontal"
+                    android:textOff=""
+                    android:textOn="" />
+
+                <TextView
+                    android:id="@+id/playPeriodText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/play_peroid_limit" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/playPeriodLayout"
+                android:layout_width="460dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/hd_grey"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/fromText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/from" />
+
+                <TextView
+                    android:id="@+id/toText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="129dp"
+                    android:layout_toRightOf="@+id/fromText"
+                    android:text="@string/to" />
+
+                <TimePicker
+                    android:id="@+id/startTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/fromText"
+                    android:layout_below="@+id/fromText" />
+
+                <TimePicker
+                    android:id="@+id/endTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/toText"
+                    android:layout_below="@+id/toText" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

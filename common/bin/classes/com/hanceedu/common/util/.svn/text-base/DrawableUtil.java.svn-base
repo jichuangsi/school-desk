@@ -1,0 +1,65 @@
+package com.hanceedu.common.util;
+
+import java.lang.reflect.Field;
+
+
+import com.hanceedu.common.R;
+import android.content.Context;
+
+/**
+ * Drawable工具类
+ * @author Iron
+ * @date 2011-9-23
+ */
+public class DrawableUtil
+{
+	/**
+	 * 
+	 * @param context
+	 * @param px
+	 * @return
+	 */
+	public static float px2dip(Context context, float px)
+	{
+		final float scale = context.getResources().getDisplayMetrics().density;
+		return (px - 0.5f) / scale;
+	}
+
+	/**
+	 * 
+	 * @param context
+	 * @param dip
+	 * @return
+	 */
+	public static float dip2px(Context context, float dip)
+	{
+		final float scale = context.getResources().getDisplayMetrics().density;
+		return (dip * scale + 0.5f);
+	}
+	
+	/**
+	 * 通过图片名找得到该图片在android系统中对应的id
+	 * 
+	 * @param pic
+	 *            需要查找的图片名称(不需要后缀名)
+	 * @return R中存储的改图片的id
+	 */
+	public static int getImageId(String pic) {
+		if (pic == null || pic.trim().equals("")) {
+			return R.drawable.icon;
+		}
+		Class<?> draw = R.drawable.class;
+		try {
+			Field field = draw.getDeclaredField(pic);
+			return field.getInt(pic);
+		} catch (SecurityException e) {
+			return R.drawable.icon;
+		} catch (NoSuchFieldException e) {
+			return R.drawable.icon;
+		} catch (IllegalArgumentException e) {
+			return R.drawable.icon;
+		} catch (IllegalAccessException e) {
+			return R.drawable.icon;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package hance.Bear.Subject;
+
+import hance.Bear.widget.SelectSubjectDialog;
+import android.app.Activity;
+import android.os.Bundle;
+
+public class SubjectSelectActivity extends Activity {
+    /** Called when the activity is first created. */
+
+	SelectSubjectDialog mGridDialog;
+	
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mGridDialog = new SelectSubjectDialog(this,"1,2,9,6,3,11,12");
+        mGridDialog.show();
+    }
+}

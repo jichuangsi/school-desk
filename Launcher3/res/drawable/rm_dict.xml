@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+        <!-- 按下状态时的效果 -->
+    <item android:drawable="@drawable/room_dict_p" android:state_pressed="true"/>
+    <!-- 默认状态下的显示效果 -->
+    <item android:drawable="@drawable/room_dict"/>
+
+</selector>

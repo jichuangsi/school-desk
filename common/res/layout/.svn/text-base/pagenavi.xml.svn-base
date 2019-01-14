@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/page_bar_header">
+	
+		<ImageButton
+			android:id="@+id/first_btn"
+			style="@style/header_first_btn"></ImageButton>
+		<ImageButton
+			android:id="@+id/prev_btn"
+			style="@style/header_previous_btn"></ImageButton>
+		<TextView
+		style="@style/header_number_text"
+			android:id="@+id/showNum"
+			android:text="0/0"></TextView>
+		<ImageButton
+			android:id="@+id/next_btn"
+			style="@style/header_next_btn"></ImageButton>
+		<ImageButton
+			android:id="@+id/last_btn"
+			style="@style/header_last_btn"></ImageButton>
+	</LinearLayout>

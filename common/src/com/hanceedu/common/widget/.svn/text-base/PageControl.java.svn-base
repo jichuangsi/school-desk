@@ -1,0 +1,189 @@
+/**
+ * 
+ */
+package com.hanceedu.common.widget;
+
+import com.hanceedu.common.R;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+/**
+ * 自定义翻页控制器,通过android自带组件组合成
+ * 
+ * @author ben.upsilon@gmail.com
+ * @date 2011-9-19
+ * 
+ */
+public class PageControl extends LinearLayout
+{
+	/**
+	 * 分页数字点击
+	 */
+	public interface onPageNumClickListener
+	{
+		void onClick();
+	}
+	
+	/** 该翻页控制器提供的最大页数 */
+	private int totalPage = 10;
+	
+	/** 该翻页控制器当前显示的页数 */
+	private int currentPage = 1;
+	
+	/** 页面显示对象  显示格式为 currentPage/totalPage */
+	private TextView mShowNum;
+	
+	/** 各个按钮对象 */
+	private ImageButton first;
+	private ImageButton next;
+	private ImageButton back;
+	private ImageButton last;
+	private onPageNumClickListener numClickListener;
+	/**
+	 * 设置按钮监听事件
+	 */
+	private OnClickListener listener = new OnClickListener()
+	{
+
+		@Override
+		public void onClick(View v)
+		{
+			switch (v.getId())
+			{
+			case R.id.first_btn:
+				gotoPage(1);
+				break;
+			case R.id.prev_btn:
+				gotoPage(currentPage - 1);
+				break;
+			case R.id.next_btn:
+				gotoPage(currentPage + 1);
+				break;
+			case R.id.last_btn:
+				gotoPage(totalPage);
+				break;
+			case R.id.showNum:
+				showPad();
+				break;
+			}
+		}
+	};
+
+	/**
+	 * 
+	 */
+	private void showPad()
+	{
+		numClickListener.onClick();
+	}
+
+	public void setOnPageNumClickListener(onPageNumClickListener listener)
+	{
+		numClickListener = listener;
+	}
+
+	/**
+	 * @param context
+	 * @param attrs
+	 */
+	public PageControl(Context context, AttributeSet attrs)
+	{
+		super(context, attrs);
+		ViewGroup layout = (ViewGroup) inflate(context, R.layout.page_bar, this);
+		mShowNum = (TextView) layout.findViewById(R.id.showNum);
+		first = (ImageButton) layout.findViewById(R.id.first_btn);
+		last = (ImageButton) layout.findViewById(R.id.last_btn);
+		next = (ImageButton) layout.findViewById(R.id.next_btn);
+		back = (ImageButton) layout.findViewById(R.id.prev_btn);
+
+		mShowNum.setOnClickListener(listener);
+		first.setOnClickListener(listener);
+		last.setOnClickListener(listener);
+		next.setOnClickListener(listener);
+		back.setOnClickListener(listener);
+		judgePage();
+		setPageNo(1);
+	}
+
+	/**
+	 * 设置总页数总页数
+	 * 
+	 * @param pageTotal
+	 */
+	public void setPageTotal(int pageTotal)
+	{
+		this.totalPage = pageTotal;
+		String showText = currentPage + "/" + pageTotal;
+		mShowNum.setText(showText);
+		judgePage();
+	}
+
+	/**
+	 * 判断页码控制前翻和后翻按钮
+	 */
+	private void judgePage()
+	{
+		if (currentPage == 1)
+		{
+			first.setEnabled(false);
+			back.setEnabled(false);
+			last.setEnabled(true);
+			next.setEnabled(true);
+		} else if (currentPage == totalPage)
+		{
+			last.setEnabled(false);
+			next.setEnabled(false);
+			first.setEnabled(true);
+			back.setEnabled(true);
+		} else
+		{
+			first.setEnabled(true);
+			back.setEnabled(true);
+			last.setEnabled(true);
+			next.setEnabled(true);
+		}
+	}
+
+	/**
+	 * 设置要显示目标页数
+	 * 
+	 * @param pageNo
+	 */
+	public void setPageNo(int pageNo)
+	{
+		this.currentPage = pageNo;
+		String showText = pageNo + "/" + totalPage;
+		mShowNum.setText(showText);
+		judgePage();
+	}
+
+	/**
+	 * 跳转目标页面
+	 * 
+	 * @param pageNo
+	 */
+	public void gotoPage(int pageNo)
+	{
+		if (pageNo == 0)
+		{
+			setPageNo(1);
+		} else if (pageNo == totalPage)
+		{
+			setPageNo(totalPage);
+		} else
+		{
+			setPageNo(pageNo);
+		}
+	}
+
+	public int getTotalPage()
+	{
+		return this.totalPage;
+	}
+}

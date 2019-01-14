@@ -1,0 +1,12 @@
+key=1;x=17; y=49;  dx=41 dy=41
+key=2;x=57; y=54-5;  ͬ��
+key=3;x=97; y=49; ͬ��
+key=4;x=137
+key=5;x=177
+
+
+key=enter; x=422  y=52  dx 67  dy= 41
+
+key=delete x=399  y=12  dx = 48  dy 38
+
+key = cancel  x=449 y=10  d=48

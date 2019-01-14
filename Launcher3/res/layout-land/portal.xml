@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/spaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/promoteView"
+        android:layout_below="@+id/promoteView"
+        android:onClick="handleClick"
+        android:src="@drawable/portal_space" />
+
+    <ImageView
+        android:id="@+id/tutorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/classView"
+        android:layout_alignTop="@+id/spaceView"
+        android:onClick="handleClick"
+        android:src="@drawable/portal_tutor" />
+
+    <ImageView
+        android:id="@+id/schoolbagView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/homeworkView"
+        android:layout_toRightOf="@+id/homeworkView"
+        android:layout_marginLeft="10dp"
+        android:onClick="handleClick"
+        android:src="@drawable/portal_schoolbag" />
+
+    <ImageView
+        android:id="@+id/appsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/schoolbagView"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/homeworkView"
+        android:onClick="handleClick"
+        android:src="@drawable/portal_apps"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/messageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/schoolbagView"
+        android:layout_alignRight="@+id/schoolbagView"
+        android:layout_marginBottom="15dp"
+        android:drawableTop="@drawable/portal_message"
+         android:clickable="true"
+         android:focusable="true" 
+        android:onClick="handleClick"
+        android:text="消息通知" />
+
+    <TextView
+        android:id="@+id/profileView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/messageView"
+        android:layout_alignBottom="@+id/messageView"
+        android:layout_marginRight="30dp"
+        android:layout_toLeftOf="@+id/messageView"
+        android:drawableTop="@drawable/portal_profile"
+         android:clickable="true"
+         android:focusable="true" 
+        android:onClick="handleClick"
+        android:text="个人中心" />
+
+    <ImageView
+        android:id="@+id/vbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/vbar" />
+
+    <ImageView
+        android:id="@+id/homeworkView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/vbar"
+        android:onClick="handleClick"
+        android:src="@drawable/portal_homework" />
+
+    <ImageView
+        android:id="@+id/classView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/homeworkView"
+        android:layout_toLeftOf="@+id/vbar"
+        android:onClick="handleClick"
+        android:src="@drawable/portal_class" />
+
+    <ImageView
+        android:id="@+id/promoteView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/classView"
+        android:layout_toLeftOf="@+id/tutorView"
+        android:onClick="handleClick"
+        android:src="@drawable/portal_promote" />
+
+</RelativeLayout>

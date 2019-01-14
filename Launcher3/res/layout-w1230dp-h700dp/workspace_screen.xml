@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<cn.netin.launcher.CellLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res/cn.netin.launcher"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    launcher:cellWidth="@dimen/workspace_land_cell_width"
+    launcher:cellHeight="@dimen/workspace_land_cell_height"
+    launcher:longAxisStartPadding="@dimen/workspace_land_longAxisStartPadding"
+    launcher:longAxisEndPadding="@dimen/workspace_land_longAxisEndPadding"
+    launcher:shortAxisStartPadding="@dimen/workspace_land_shortAxisStartPadding"
+    launcher:shortAxisEndPadding="@dimen/workspace_land_shortAxisEndPadding"
+    launcher:shortAxisCells="3"
+    launcher:longAxisCells="7" />

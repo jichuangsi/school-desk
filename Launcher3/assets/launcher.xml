@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+
+  
+    <item
+        name="Parental Control"
+        cls="cn.netin.parentalcontrol.ProtectionActivity"
+        data=""
+        icon="bt_pass.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+    
+    <!--  
+    
+                <item
+        name="Avatar"
+        cls="cn.netin.launcher.AvatarActivity"
+        data=""
+        icon="bt_avatar.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+    
+      -->    
+            <item
+        name="Apps"
+        cls="cn.netin.parentalcontrol.AppManagerActivity"
+        data=""
+        icon="bt_app.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+        
+            <item
+        name="Time Limit"
+        cls="cn.netin.parentalcontrol.RestTimeActivity"
+        data=""
+        icon="bt_time.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+        
+        
+            <item
+        name="Report"
+        cls="cn.netin.parentalcontrol.UsageActivity"
+        data=""
+        icon="bt_analys.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+        
+        
+            <item
+        name="Web Access"
+        cls="cn.netin.parentalcontrol.WebAccessActivity"
+        data="com.hanceedu.voicebook"
+        icon="bt_web.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+
+</items>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/page_board_wrapper">
+	<com.hanceedu.common.widget.Keys
+		android:id="@+id/key1"
+		style="@style/page_board_keys"
+		/>
+	<TextView
+		android:id="@+id/pageNum"
+		style="@style/page_board_text">
+		</TextView>
+</RelativeLayout>

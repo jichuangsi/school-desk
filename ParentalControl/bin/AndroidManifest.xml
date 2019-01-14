@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.netin.parentalcontrol"
+    android:versionCode="3"
+    android:versionName="1.2" >
+
+    <!-- android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize" -->
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="24" />
+
+    <application
+        android:name="com.hanceedu.common.HanceApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/parental_control"
+        android:theme="@style/ThemeFullscreen" >
+        <activity
+            android:name="cn.netin.parentalcontrol.MainActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:label="@string/parental_control"
+            android:launchMode="singleTop" >
+           
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.PasswordActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:label="@string/parental_control"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.ProtectionActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:label="@string/parental_control"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.AppManagerActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+             android:launchMode="singleTop"
+            android:label="@string/parental_control" >
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.UsageActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:label="@string/parental_control" >
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.RestTimeActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+             android:launchMode="singleTop"
+            android:label="@string/parental_control" >
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.WebAccessActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+             android:launchMode="singleTop"
+            android:label="@string/parental_control"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+    </application>
+
+</manifest>

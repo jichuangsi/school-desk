@@ -1,0 +1,26 @@
+-keepclassmembers class * {
+    void handleClick(android.view.View) ;
+}
+
+-keepclassmembers class cn.netin.launcher.LauncherActivity {
+	public static android.content.Context getContext() ; 
+}
+
+-keepclassmembers class cn.netin.launcher.data.LauncherData {
+	public static * ; 
+}
+
+-keep class  cn.netin.elui.* {
+   public *;
+}
+
+-keepclasseswithmembernames class cn.netin.elui.* {
+   public *;
+}
+
+
+-dontwarn org.apache.http.**  
+-keep class org.apache.http.** { *;}  
+
+ -dontwarn android.net.http.**
+-keep class android.net.http.** { *;}

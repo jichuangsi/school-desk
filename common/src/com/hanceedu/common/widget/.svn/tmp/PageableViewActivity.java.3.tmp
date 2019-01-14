@@ -1,0 +1,48 @@
+package com.hanceedu.common.widget;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+import com.hanceedu.common.widget.PageControl.onPageNumClickListener;
+
+public class PageableViewActivity extends Activity
+{
+
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.page_pageable_activity);
+		final PageControl pageableView = (PageControl) findViewById(R.id.pageableView1);
+
+		pageableView.setOnPageNumClickListener(new onPageNumClickListener()
+		{
+
+			public void onClick()
+			{
+				final KeyboardByMap key = new KeyboardByMap(
+						PageableViewActivity.this, pageableView.getTotalPage());
+
+				key.setOnKeyboardClickListener(new KeyboardByMap.OnKeyboardClickListener()
+				{
+
+					@Override
+					public void onOk(int page)
+					{
+						pageableView.setPageNo(page);
+						key.dismiss();
+					}
+
+					@Override
+					public void onCancel()
+					{
+						key.dismiss();
+					}
+				});
+				key.show();
+			}
+		});
+	}
+
+}

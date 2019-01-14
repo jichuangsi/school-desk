@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="workspace_port_cell_width">144dp</dimen>
+    <dimen name="workspace_port_cell_height">144dp</dimen>
+    <dimen name="workspace_port_longAxisStartPadding">160dp</dimen>
+    <dimen name="workspace_port_longAxisEndPadding">60dp</dimen>
+    <dimen name="workspace_port_shortAxisStartPadding">50dp</dimen>
+    <dimen name="workspace_port_shortAxisEndPadding">50dp</dimen>
+    <dimen name="workspace_port_longAxisStartPaddingL">160dp</dimen>
+    <dimen name="workspace_port_longAxisEndPaddingL">50dp</dimen>
+    <dimen name="workspace_port_cell_width42">90px</dimen>
+    <dimen name="workspace_port_cell_height42">80px</dimen>
+    <dimen name="workspace_port_longAxisStartPadding42">20px</dimen>
+    <dimen name="workspace_port_longAxisEndPadding42">20px</dimen>
+    <dimen name="workspace_port_shortAxisStartPadding42">10px</dimen>
+    <dimen name="workspace_port_shortAxisEndPadding42">10px</dimen>
+    <dimen name="workspace_land_cell_width">144dp</dimen>
+    <dimen name="workspace_land_cell_height">144dp</dimen>
+    <dimen name="workspace_land_longAxisStartPadding">50dp</dimen>
+    <dimen name="workspace_land_longAxisEndPadding">50dp</dimen>
+    <dimen name="workspace_land_shortAxisStartPadding">160dp</dimen>
+    <dimen name="workspace_land_shortAxisEndPadding">60dp</dimen>
+    <dimen name="workspace_land_shortAxisStartPaddingL">160dp</dimen>
+    <dimen name="workspace_land_shortAxisEndPaddingS">40dp</dimen>
+    <dimen name="workspace_land_cell_width42">100px</dimen>
+    <dimen name="workspace_land_cell_height42">80px</dimen>
+    <dimen name="workspace_land_longAxisStartPadding42">20px</dimen>
+    <dimen name="workspace_land_longAxisEndPadding42">20px</dimen>
+    <dimen name="workspace_land_shortAxisStartPadding42">40px</dimen>
+    <dimen name="workspace_land_shortAxisEndPadding42">20px</dimen>
+    <dimen name="workspace_cell_width_hdpi">128dp</dimen>
+    <dimen name="workspace_cell_height_hdpi">128dp</dimen>
+    <dimen name="workspace_port_longAxisStartPadding_hdpi">80dp</dimen>
+    <dimen name="workspace_port_longAxisEndPadding_hdpi">30dp</dimen>
+
+</resources>

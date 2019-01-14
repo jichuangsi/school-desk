@@ -1,0 +1,6 @@
+# view res/layout/page_board.xml #generated:5
+-keep class com.hanceedu.common.widget.Keys { <init>(...); }
+
+# view res/layout/page_pageable_activity.xml #generated:5
+-keep class com.hanceedu.common.widget.PageControl { <init>(...); }
+

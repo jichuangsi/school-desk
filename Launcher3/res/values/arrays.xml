@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="storage_paths">
+        <item>/mnt/flash/</item>
+        <item>/mnt/sdcard/</item>
+        <item>/flash/</item>
+        <item>/sdcard/</item>
+    </string-array>
+    <string-array name="white_list">
+        <item>com.android.wallpaper.livepicker</item>
+        <item>com.android.launcher</item>
+        <item>com.android.launcher2</item>
+        <item>com.android.launcher3</item>
+        <item>com.android.documentsui</item>
+        <item>com.google.android.inputmethod.pinyin</item>
+        <item>org.videolan.vlc</item>
+        <item>com.gensee.webcast</item>
+        <item>com.cyanogenport.trebuchet</item>
+        <item></item>
+        <item></item>
+    </string-array>  
+    
+    <string-array name="labels">
+        <item>同步</item>
+        <item>拓展</item>
+        <item>词典</item>
+        <item>文科</item>
+        <item>理科</item>
+        <item>英语</item>
+        <item>工具</item>
+        <item>应用</item>
+    </string-array>
+
+</resources>

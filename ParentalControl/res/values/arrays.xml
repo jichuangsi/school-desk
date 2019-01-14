@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="storage_paths">
+        <item>/mnt/flash/</item>
+        <item>/mnt/sdcard/</item>
+        <item>/flash/</item>
+        <item>/sdcard/</item>
+    </string-array>
+    <string-array name="data_paths">
+        <item>/mnt/flash/学习内容/</item>
+        <item>/mnt/sdcard/学习内容/</item>
+        <item>/flash/学习内容/</item>
+        <item>/sdcard/学习内容/</item>
+    </string-array>
+
+
+    <string-array name="groups">
+        <item>Desktop</item>
+        <item>Educational</item>
+        <item>Ebook</item>
+        <item>Game</item>
+        <item>Creative</item>
+        <item>Tools</item>
+        <item>Mics</item>
+    </string-array>
+    
+     <string-array name="groups_kk">
+        <item>Desktop</item>
+        <item>Android Apps</item>
+    </string-array>
+       
+    <string-array name="urls">
+        <item>http://www.wikipedia.org</item>
+        <item>http://www.pollypocket.com/en-us</item>
+        <item>http://www.pbskids.org</item>
+        <item>http://www.pinkydinkydoo.com</item>
+    </string-array>
+
+</resources>

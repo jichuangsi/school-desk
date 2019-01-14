@@ -1,0 +1,105 @@
+package com.hanceedu.common.widget;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.TextView;
+
+public class Keyboard extends Dialog {
+
+	public interface OnKeyboardClickListener {
+		void onOk(int page);
+
+		void onCancel();
+	}
+
+	private OnKeyboardClickListener onKeyboardClickListener;
+
+	private TextView pageNum;
+	private StringBuffer str = new StringBuffer();
+	// private Listener listen = new Listener();
+	private int maxNum;
+	private Keys keyboard;
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Dialog#onCreate(android.os.Bundle)
+	 */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.board);
+
+		keyboard = (Keys) findViewById(R.id.key1);
+		pageNum = (TextView) findViewById(R.id.pageNum);
+
+		keyboard.setOnClickListener(new Keys.OnClickListener() {
+
+			@Override
+			public void onClick(String ch) {
+				if (ch.equalsIgnoreCase("enter")) {
+					if (str.length() != 0)
+						onKeyboardClickListener.onOk(Integer.parseInt(str
+								.toString()));
+				}
+				if (ch.equalsIgnoreCase("delete")) {
+					if (str.length() != 0) {
+						str.deleteCharAt(str.length() - 1);
+						pageNum.setText(str);
+					}
+				}
+				if (ch.equalsIgnoreCase("cancel")) {
+					str.delete(0, str.length());
+					pageNum.setText("");
+					onKeyboardClickListener.onCancel();
+				}
+				if (ch.matches("\\d")) {
+					str.append(ch);
+					if (Integer.parseInt(str.toString()) < 1) {
+						str = new StringBuffer();
+					}
+					pageNum.setText(str);
+				}
+			}
+		});
+
+		pageNum.addTextChangedListener(new TextWatcher() {
+			public void afterTextChanged(Editable s) {
+			}
+
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				if (!s.toString().equals("")) {
+					if (Integer.parseInt(s.toString()) > maxNum) {
+						str = new StringBuffer(maxNum + "");
+						pageNum.setText(str);
+					}
+					if (Integer.parseInt(s.toString()) < 1) {
+						pageNum.setText(1 + "");
+					}
+				}
+			}
+		});
+
+	}
+
+	public Keyboard(Context context, int total) {
+		super(context, R.style.MyDialog);
+		this.maxNum = total;
+
+	}
+
+	public void setOnKeyboardClickListener(
+			OnKeyboardClickListener keyboardClickListener) {
+		this.onKeyboardClickListener = keyboardClickListener;
+	}
+
+}

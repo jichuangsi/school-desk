@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">Launcher_common</string>
+    <string name="service_name">应用管控服务</string>
+    <string name="service_text">点击进入应用启动桌面</string>
+
+</resources>

@@ -1,0 +1,198 @@
+package hance.Bear.widget;
+
+import hance.Bear.Subject.R;
+import hance.Bear.util.DrawableTool;
+
+import java.lang.reflect.Field;
+import java.util.Arrays;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class SelectSubjectDialog extends Dialog {
+	private GridView mGridview;
+	private Context mContent;
+
+	/** 用來保存需要被顯示的圖標 */
+	Integer[] resouceIds;
+	/** 保存用户所选择的科目ID,默认值为0，表示未知 */
+	int selectedSubjectId = 0;
+	/** 已经显示的科目数组,由构造函数中String转换而来 */
+	int[] subjectIds;
+	/** 保存了所有科目名称 */
+	private static String[] allSubjects;
+	/** 用以判断allSubjects[]是否被赋值 */
+	private static boolean isInitialized = false ;
+
+	public SelectSubjectDialog(Context context, String subject) {
+		super(context);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏显示
+		setContentView(R.layout.dialog);
+		mContent = context;
+		mGridview = (GridView) findViewById(R.id.grid_view);
+		Resources resource = mGridview.getResources();
+		
+		subjectIds = splitStringToIntArray(subject); 
+		String[] resouceIdsStrings = resource.getStringArray(R.array.subjectSelector_resourceIds);
+		allSubjects = resource.getStringArray(R.array.subjectSelector_subjects);
+		
+		resouceIds = new Integer[subjectIds.length];
+		
+		for (int i = 0; i < subjectIds.length; i++) {
+			int subjectId = subjectIds[i] ;
+			String resourceIdString = resouceIdsStrings[subjectId] ;
+			resouceIds[i] = getResourceId(resourceIdString);
+		}
+		
+		mGridview.setOnItemClickListener(new GirdItemClickListener());
+		mGridview.setAdapter(new ImageAdapter(context));
+		isInitialized = true ;
+	}
+	
+	class GirdItemClickListener implements OnItemClickListener{
+
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			// TODO 用户点击Item的事件实现，暂时只获取了用户选择的科目ID
+			selectedSubjectId = subjectIds[position];
+			Toast.makeText(mContent, getSubject(selectedSubjectId)+"\tID是："+selectedSubjectId, Toast.LENGTH_SHORT).show();
+		}
+	}
+
+	public int getSelectedSubjectId(){
+		return selectedSubjectId;
+	}
+	
+	public String getSubIds() {
+		return Arrays.toString(subjectIds);
+	}	
+	
+	/**
+	 * 将string 拆分成 int[]
+	 */
+	private int[] splitStringToIntArray(String s) {
+		String[] newSt = s.split(",");
+		int[] sourceId = new int[newSt.length];
+		for (int i = 0; i < newSt.length; i++) {
+			sourceId[i] = Integer.parseInt(newSt[i]);
+		}
+		return sourceId;
+	}
+
+	/**
+	 * 根据id 得到名称
+	 * 
+	 * @param subjectId
+	 * @return
+	 */
+	public static String getSubject(int subjectId) {
+		if (!isInitialized) {
+			return null ;
+		}
+		return allSubjects[subjectId];
+	}
+
+	/**
+	 * 获取到科目id
+	 * 
+	 * @param subject
+	 * @return SubjectId
+	 */
+	public static int getResourceId(String subject) {
+		if (subject == null || subject.trim().equals("")) {
+			return R.drawable.icon;
+		}
+		Class<?> draw = R.drawable.class;
+		try {
+			Field field = draw.getDeclaredField(subject);
+			return field.getInt(subject);
+		} catch (SecurityException e) {
+			return R.drawable.icon;
+		} catch (NoSuchFieldException e) {
+			return R.drawable.icon;
+		} catch (IllegalArgumentException e) {
+			return R.drawable.icon;
+		} catch (IllegalAccessException e) {
+			return R.drawable.icon;
+		}
+	}
+
+	public class ImageAdapter extends BaseAdapter {
+		private Context mContext;
+
+		private LayoutInflater inflater;
+		
+		public ImageAdapter(Context c) {
+			mContext = c;
+			this.inflater=LayoutInflater.from(mContext);
+		}
+
+		/**
+		 * key:展示item的数目
+		 */
+		public int getCount() {
+			return subjectIds.length;
+		}
+
+		public Object getItem(int position) {
+			return null;
+		}
+
+		public long getItemId(int position) {
+			return subjectIds[position];
+		}
+
+		
+		public View getView(int position, View convertView, ViewGroup parent) {
+			TextView subject_name = null;
+			if (convertView == null) { // if it's not recycled, initialize some
+				convertView = inflater.inflate(R.layout.subject_object, null);
+				subject_name = (TextView)convertView.findViewById(R.id.label);
+				Drawable[] drawables = subject_name.getCompoundDrawables() ;
+				for (int i = 0 ; i < 4 ; i++) {
+					if(drawables[i] != null){
+						drawables[i] = DrawableTool.changeDrawableSize(
+								mContext,
+								mContext.getResources().getDrawable(resouceIds[position]),
+								64,
+								64);
+					}
+					System.out.println("drawables["+i+"]" +drawables[i]);
+				}
+				subject_name.setCompoundDrawablesWithIntrinsicBounds(
+						drawables[0],drawables[1],drawables[2],drawables[3]);
+				convertView.setTag(subject_name);
+			} else {
+				subject_name = (TextView)convertView.getTag(); 
+			}
+			
+			subject_name.setText(getSubject(subjectIds[position]));
+			
+			return convertView;
+		}
+	}
+	
+	/**
+	 * 点击dialog之外空白处 消失此dialog
+	 */
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		this.dismiss();
+		return super.onTouchEvent(event);
+	}
+
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="subjectSelector_subjects">
+		<item>未知</item>
+		<item>语文</item>
+		<item>数学</item>
+		<item>英语</item>
+		<item>物理</item>
+		<item>化学</item>
+		<item>生物</item>
+		<item>历史</item>
+		<item>地理</item>
+		<item>政治</item>
+		<item>科学</item>
+		<item>其他</item>
+		<item>全部科目</item>
+	</string-array>
+	<string-array name="subjectSelector_resourceIds">
+		<item>subject_unknown</item>
+		<item>subject_chinese</item>
+		<item>subject_maths</item>
+		<item>subject_english</item>
+		<item>subject_physics</item>
+		<item>subject_chemisty</item>
+		<item>subject_biology</item>
+		<item>subject_history</item>
+		<item>subject_geography</item>
+		<item>subject_political</item>
+		<item>subject_science</item>
+		<item>subject_other</item>
+		<item>subject_all</item>
+	</string-array>
+</resources>

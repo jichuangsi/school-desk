@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+         ButtonGroupView specific attributes. These attributes are used to customize 
+		a ButtonGroupView view in XML files.
+    -->
+    <declare-styleable name="ButtonGroupView">
+
+        <!-- The pressed status drawable res of these button group -->
+        <attr name="pressedStatusDrawalbe" format="reference" />
+        <!-- The selected status drawable res of these button group -->
+        <attr name="selectedStatusDrawalbe" format="reference" />
+        <!-- The start angel of these button group -->
+        <attr name="startAngel" format="float" />
+        <!-- The end angel of these button group -->
+        <attr name="endAngel" format="float" />
+        <!-- The buttons count of these button group -->
+        <attr name="buttonCount" format="integer" />
+        <!-- The minRadio of these button group -->
+        <attr name="minRadio" format="integer|float" />
+    </declare-styleable>
+
+</resources>

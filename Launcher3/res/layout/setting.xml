@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="440dp"
+    android:background="@drawable/bg_window" >
+
+    <TextView
+        android:id="@+id/titleView"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/menu_settings" />
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button_close"
+        android:onClick="handleClick" />
+
+    <EditText
+        android:id="@+id/webId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/styleSwitch"
+        android:layout_alignTop="@+id/messageView"
+        android:visibility="invisible" 
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/messageView"
+        android:layout_below="@+id/webId"
+        android:layout_marginTop="18dp"
+        android:textColor="#ff0000"
+        android:textSize="22sp"
+        android:visibility="invisible" 
+        android:text="@string/web_pass" />
+
+    <EditText
+        android:id="@+id/webPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/webId"
+        android:layout_alignTop="@+id/textView3"
+        android:ems="10"
+        android:visibility="invisible" 
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/messageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/error_text"
+        android:layout_below="@+id/styleSwitch"
+        android:layout_marginTop="105dp"
+        android:text="@string/web_id"
+        android:textColor="#ff0000"
+        android:textSize="22sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/error_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/error_text"
+        android:layout_below="@+id/error_text"
+        android:layout_marginTop="27dp"
+        android:text="扁平化主界面"
+        android:textColor="#ff0000"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/titleView"
+        android:layout_below="@+id/closeButton"
+        android:layout_marginTop="16dp"
+        android:text="@string/style_kids"
+        android:textColor="#ff0000"
+        android:textSize="22sp" />
+
+    <ToggleButton
+        android:id="@+id/flatSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/error_title"
+        android:layout_alignBottom="@+id/error_title"
+        android:layout_alignLeft="@+id/styleSwitch"
+        android:background="@drawable/button_switch"
+        android:textOn=""
+        android:textOff=""
+        android:checked="false" />
+
+    <ToggleButton
+        android:id="@+id/styleSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/error_text"
+        android:layout_alignBottom="@+id/error_text"
+        android:layout_marginRight="36dp"
+        android:layout_toLeftOf="@+id/closeButton"
+        android:background="@drawable/button_switch"
+        android:textOn=""
+        android:textOff=""
+        android:checked="false" />
+
+</RelativeLayout>

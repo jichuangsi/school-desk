@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.netin.launcher"
+    android:anyDensity="true"
+    android:versionCode="3"
+    android:versionName="3.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <supports-screens android:anyDensity="true" />
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/> 
+
+    <uses-feature android:name="android.hardware.camera" />
+    <!--
+                android:theme="@style/ThemeNoBgNoTb"
+    android:clearTaskOnLaunch="true"
+    android:launchMode="singleTask" 
+    android:process="android.process.acore" 
+    android:stateNotNeeded="true" 
+    android:process="android.process.acore" 
+    android:clearTaskOnLaunch="true"
+    android:launchMode="singleTop" 
+    
+    android:theme="@style/ThemeNoBgNoTb"
+    
+    
+            <activity
+            android:name=".Controller"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation"
+            android:stateNotNeeded="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+            </intent-filter>
+        </activity>
+        
+        android:theme="@style/ThemeFullscreen2"
+    -->
+
+    <application
+        android:name="com.hanceedu.common.HanceApplication"
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:icon="@drawable/icon"
+        android:label="@string/launcher_name"
+        android:manageSpaceActivity="cn.netin.launcher.ManageSpaceActivity"
+        android:screenOrientation="landscape"
+        android:theme="@style/ThemeNoBgNoTb" >
+        <activity
+            android:name=".LauncherActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+            <intent-filter android:priority="2" >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME_FIRST" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ManageSpaceActivity"
+            android:label="@string/manage_space"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".RestActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="cn.netin.launcher.action.LOCK_SCREEN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WallpaperChooser"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/pick_wallpaper" >
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AvatarActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/ThemeDialog"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+            <intent-filter>
+                <action android:name="hanceedu.intent.action.SET_AVATAR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/ThemeDialog"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/ThemeDialog"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/ThemeDialog"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/ThemeDialog" >
+        </activity>
+        <activity
+            android:name=".BlockActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/block_activity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name="cn.netin.wifisetting.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/wifi_app_name" >
+        </activity>
+        <activity
+            android:name="cn.netin.launcher.installer.InstallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:label="@string/apk_installer"
+            android:screenOrientation="unspecified" >
+            
+            <!-- 
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.INSTALL_PACKAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/vnd.android.package-archive" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.INSTALL_PACKAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:scheme="package" />
+                <data android:scheme="content" />
+            </intent-filter>
+            
+             -->
+             
+        </activity>
+        
+         <activity
+            android:name=".ErrorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/ThemeDialog"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.netin.launcher.installer.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+
+        <service
+            android:name=".service.AIService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.netin.launcher.service.AISERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.MediaService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.netin.launcher.service.MEDIASERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.AppStatService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.netin.launcher.service.APPSTATSERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.WtsService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.netin.launcher.service.WTSSERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.RemoteService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.netin.launcher.service.REMOTE" />
+            </intent-filter>
+        </service>
+         <service
+            android:name=".service.DownloadService" 
+            android:process=":downloadService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.netin.launcher.service.DOWNLOADSERVICE" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name=".provider.ParentalProvider"
+            android:authorities="cn.netin.launcher.parental_provider"
+            android:exported="true" />
+        <provider
+            android:name=".provider.AppProvider"
+            android:authorities="cn.netin.launcher.app_provider"
+            android:exported="true" />
+
+        <!--
+        <receiver android:name=".receiver.LockScreenReceiver" 
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.netin.launcher.action.LOCK_SCREEN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        -->
+        <receiver android:name=".receiver.LauncherStateReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="cn.netin.launcher.action.LAUNCHER_ON" />
+                <action android:name="cn.netin.launcher.action.LAUNCHER_OFF" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ##################### parental control ################# -->
+
+        <activity
+            android:name="cn.netin.parentalcontrol.PasswordActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:icon="@drawable/ic_parental_control"
+            android:label="@string/parental_control"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeDialog"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.MainActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:label="@string/parental_control"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeFullscreen_pc" >
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.ProtectionActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:label="@string/parental_control"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeFullscreen_pc"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.AppManagerActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:label="@string/parental_control"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeFullscreen_pc" >
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.UsageActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/ThemeFullscreen_pc" >
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.RestTimeActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:label="@string/parental_control"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeFullscreen_pc" >
+        </activity>
+        <activity
+            android:name="cn.netin.parentalcontrol.WebAccessActivity"
+            android:configChanges="keyboardHidden|orientation|locale|layoutDirection|screenSize"
+            android:label="@string/parental_control"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeFullscreen_pc"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+
+        <!-- ##################### kids browser ################# -->
+
+        <activity
+            android:name="cn.netin.kidsbrowser.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:icon="@drawable/ic_kids_browser"
+            android:label="@string/kids_browser"
+            android:screenOrientation="landscape"
+            android:theme="@style/KidsBrowserTheme"
+            android:windowSoftInputMode="adjustResize" >
+
+            <!-- We are also the main entry point of the browser. -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.APP_BROWSER" />
+            </intent-filter>
+
+            <!--
+                 For these schemes were not particular MIME type has been
+                 supplied, we are a good candidate.
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="about" />
+                <data android:scheme="javascript" />
+            </intent-filter>
+            <!--
+                  For these schemes where any of these particular MIME types
+                  have been supplied, we are a good candidate.
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="inline" />
+                <data android:mimeType="text/html" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/xhtml+xml" />
+                <data android:mimeType="application/vnd.wap.xhtml+xml" />
+            </intent-filter>
+            <!-- For viewing saved web archives. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="file" />
+                <data android:mimeType="application/x-webarchive-xml" />
+            </intent-filter>
+            <!-- Accept inbound NFC URLs at a low priority -->
+            <intent-filter android:priority="-101" >
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.WEB_SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

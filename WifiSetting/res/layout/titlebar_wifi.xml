@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:id="@+id/layout_titlebar"  
+    android:layout_width="match_parent"  
+    android:layout_height="82dp"  
+    android:background="#3333AA" >  
+  
+    <TextView  
+        android:id="@+id/text_title"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:ellipsize="marquee"  
+        android:gravity="center_horizontal"  
+        android:singleLine="true"  
+        android:paddingBottom="10dp"    
+        android:layout_alignParentBottom="true" 
+        android:text="Wifi设置"  
+        android:textColor="#ffffffff"  
+        android:textSize="20dp" />  
+  
+    <Button  
+        android:id="@+id/button_backward"  
+        android:layout_width="80dp"  
+        android:layout_height="36dp"  
+        android:drawableLeft="@drawable/back_arrow"  
+        android:drawablePadding="0dp"  
+        android:ellipsize="end"  
+       android:layout_alignParentBottom="true" 
+        android:onClick="onClick"         
+        android:paddingLeft="5dp"
+         android:paddingTop="10dp"  
+        android:layout_marginBottom="10dp"   
+        android:singleLine="true"  
+        android:text="返回"  
+        android:textColor="#ffffffff"  
+        android:background="@null"
+        android:textSize="18dp"  
+         />  
+  
+    <!-- 
+        
+    <Switch  
+        android:id="@+id/switch1"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content" 
+        android:layout_alignParentRight="true" 
+        android:gravity="center"   
+        android:paddingLeft="5dp"  
+        android:paddingRight="10dp" 
+        android:paddingTop="15dp"   
+ 		android:textOff="关闭中"  
+        android:textOn="开启中"
+        
+         />  
+          -->
+    
+    <ToggleButton
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content" 
+        android:layout_alignParentRight="true" 
+       android:layout_alignParentBottom="true" 
+        android:layout_marginRight="10dp" 
+        android:layout_marginBottom="5dp"   
+        android:background="@drawable/button_switch"
+        android:checked="false"
+        android:textOff=""
+        android:textOn="" />
+         
+    <!-- android:textOff="wifi关闭中"  
+        android:textOn="wifi开启中" -->
+  
+</RelativeLayout>  
+

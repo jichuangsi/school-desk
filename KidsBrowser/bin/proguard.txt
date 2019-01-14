@@ -1,0 +1,19 @@
+# view AndroidManifest.xml #generated:23
+-keep class cn.netin.kidsbrowser.MainActivity { <init>(...); }
+
+# view res/layout/activity_main.xml #generated:8
+-keep class cn.netin.kidsbrowser.MyWebView { <init>(...); }
+
+# view res/layout/page_board.xml #generated:5
+-keep class com.hanceedu.common.widget.Keys { <init>(...); }
+
+# view res/layout/page_pageable_activity.xml #generated:5
+-keep class com.hanceedu.common.widget.PageControl { <init>(...); }
+
+# onClick res/layout/activity_main.xml #generated:27
+# onClick res/layout/activity_main.xml #generated:52
+# onClick res/layout/activity_main.xml #generated:61
+# onClick res/layout/activity_main.xml #generated:70
+# onClick res/layout/activity_main.xml #generated:79
+-keepclassmembers class * { *** onClick(...); }
+

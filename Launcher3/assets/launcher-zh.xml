@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+
+  
+    <item
+        name="权限控制"
+        cls="cn.netin.parentalcontrol.ProtectionActivity"
+        data=""
+        icon="bt_pass.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+    
+    <!--  
+                    <item
+        name="学生设置"
+        cls="cn.netin.launcher.AvatarActivity"
+        data=""
+        icon="bt_avatar.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+    -->
+    
+        
+            <item
+        name="学生应用管理"
+        cls="cn.netin.parentalcontrol.AppManagerActivity"
+        data=""
+        icon="bt_app.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+        
+            <item
+        name="使用时间管理"
+        cls="cn.netin.parentalcontrol.RestTimeActivity"
+        data=""
+        icon="bt_time.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+        
+        
+            <item
+        name="学生使用分析"
+        cls="cn.netin.parentalcontrol.UsageActivity"
+        data=""
+        icon="bt_analys.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+        
+        
+            <item
+        name="学生上网管理"
+        cls="cn.netin.parentalcontrol.WebAccessActivity"
+        data="com.hanceedu.voicebook"
+        icon="bt_web.png"
+        pkg="cn.netin.launcher"
+        screen="0"
+        x="1"
+        y="1"/>
+
+</items>

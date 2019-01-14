@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="450dp"
+    android:layout_height="194dp"
+    android:background="@drawable/setting_bg"
+    android:gravity="center_vertical|center"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+
+    <!-- 
+    <TextView
+        android:id="@+id/MENU_SETTINGS"
+        android:layout_width="105dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="0dp"
+        android:clickable="true"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/menu_settings"
+        android:gravity="center_horizontal"
+        android:onClick="handleClick"
+        android:text="@string/menu_settings"
+        android:textColor="#000" />
+     -->
+    
+    <TextView
+        android:id="@+id/MENU_PARENTAL"
+        android:layout_width="105dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="0dp"
+        android:clickable="true"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/menu_parent_pass"
+        android:gravity="center_horizontal"
+        android:onClick="handleClick"
+        android:text="@string/parent_settings"
+        android:textColor="#000" />
+    
+    <!-- 
+    <TextView
+        android:id="@+id/MENU_WALLPAPER_SETTINGS"
+        android:layout_width="105dp"
+        android:layout_height="80dp"
+        android:clickable="true"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/menu_wallpaper"
+        android:gravity="center_horizontal"
+        android:onClick="handleClick"
+        android:text="@string/menu_wallpaper"
+        android:textColor="#000" />
+    
+     -->
+     
+    <TextView
+        android:id="@+id/MENU_ABOUT"
+        android:layout_width="105dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="0dp"
+        android:clickable="true"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/menu_notifications"
+        android:gravity="center_horizontal"
+        android:onClick="handleClick"
+        android:text="@string/menu_about"
+        android:textColor="#000" />
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/pageable_wrapper">
+	<com.hanceedu.common.widget.PageControl
+		android:id="@+id/pageableView1"
+		style="@style/pageable_header">
+		</com.hanceedu.common.widget.PageControl>
+</LinearLayout>

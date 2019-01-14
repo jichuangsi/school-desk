@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="parental_control">Parent Settings</string>
+    <string name="available">Available applications:</string>
+    <string name="kids">Kids\' applications:</string>
+    <string name="add">Add >></string>
+    <string name="remove">Remove &lt;&lt;</string>
+    <string name="select_source">Please select an application from the left column to add.</string>
+    <string name="select_target">Please select an application from the right column to remove.</string>
+    <string name="error">Sorry, something is wrong.</string>
+    <string name="add_ok">The application has been added to the kids\' launcher.</string>
+    <string name="remove_ok">The application has been removed from the kids\' launcher.</string>
+    <string name="avatar_setting">Avatar Setting</string>
+    <string name="password_protection">Access Control</string>
+    <string name="app_permit">App Allocation</string>
+    <string name="play_limit">Play Time Limit</string>
+    <string name="usage_report">Usage Report</string>
+    <string name="web_access">Web Access</string>
+    <string name="web_access_limit">Can only visit following sites:</string>
+    <string name="white_list">White list:(wildcat can be used. i.e. *.abc.com)</string>
+    <string name="protection_switch">Restrict quitting from kid\'s launcher:</string>
+    <string name="input_password">Password for parent access:</string>
+    <string name="confirm_password">Re-type password:</string>
+    <string name="password_not_confirm">Passwords are not the same.</string>
+    <string name="password_required">Please set your password.</string>
+    <string name="confirm_required">Please confirm your password.</string>
+    <string name="input_email">Email for password recovery</string>
+    <string name="play_time_limit">Play time limit:</string>
+    <string name="max_play_time">Max play time:</string>
+    <string name="rest_time">Rest time:</string>
+    <string name="play_peroid_limit">Play period limit:</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
+    <string name="invalid_period">Invalid play period setting, please check again.</string>
+	 <string name="stat_permission">Please enable the Kids Launcher to continue</string>
+	 <string name="dialog_message">You must enable the Kids Launcher to continue </string>
+    <string name="dialog_ok">go to settings</string>
+    <string name="dialog_no">forget it</string>
+    <string name="dialog_title">Warning</string>
+    <string name="invalid_url">Invalid URL</string>
+    <string name="no_launcher">You need to install our launcher before you can use this app</string>  
+	<string name="default_pass">Default Password is 0000. Please change it.</string>
+    <string name="wrong_password">Wrong password</string>
+</resources>

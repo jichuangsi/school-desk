@@ -1,0 +1,221 @@
+# view AndroidManifest.xml #generated:205
+-keep class android.support.v4.content.FileProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:351
+-keep class cn.netin.kidsbrowser.MainActivity { <init>(...); }
+
+# view res/layout/activity_main.xml #generated:8
+-keep class cn.netin.kidsbrowser.MyWebView { <init>(...); }
+
+# view AndroidManifest.xml #generated:144
+-keep class cn.netin.launcher.AboutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:121
+-keep class cn.netin.launcher.AvatarActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:155
+-keep class cn.netin.launcher.BlockActivity { <init>(...); }
+
+# view land\res/layout-land/workspace_screen.xml #generated:3
+# view port\res/layout-port/workspace_screen.xml #generated:17
+# view w1230dp-h620dp-v13\res/layout-w1230dp-h620dp-v13/workspace_screen.xml #generated:3
+# view w1230dp-h700dp-v13\res/layout-w1230dp-h700dp-v13/workspace_screen.xml #generated:3
+# view w430dp-h700dp-v13\res/layout-w430dp-h700dp-v13/workspace_screen.xml #generated:17
+# view w483dp-h803dp-v13\res/layout-w483dp-h803dp-v13/workspace_screen.xml #generated:17
+# view w550dp-h700dp-v13\res/layout-w550dp-h700dp-v13/workspace_screen.xml #generated:17
+# view w550dp-h924dp-v13\res/layout-w550dp-h924dp-v13/workspace_screen.xml #generated:17
+# view w718dp-h924dp-v13\res/layout-w718dp-h924dp-v13/workspace_screen.xml #generated:17
+# view w750dp-h1180dp-v13\res/layout-w750dp-h1180dp-v13/workspace_screen.xml #generated:17
+# view w750dp-h380dp-v13\res/layout-w750dp-h380dp-v13/workspace_screen.xml #generated:3
+# view w750dp-h500dp-v13\res/layout-w750dp-h500dp-v13/workspace_screen.xml #generated:3
+# view w803dp-h483dp-v13\res/layout-w803dp-h483dp-v13/workspace_screen.xml #generated:3
+# view w974dp-h500dp-v13\res/layout-w974dp-h500dp-v13/workspace_screen.xml #generated:3
+# view w974dp-h668dp-v13\res/layout-w974dp-h668dp-v13/workspace_screen.xml #generated:3
+-keep class cn.netin.launcher.CellLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:198
+-keep class cn.netin.launcher.ErrorActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:80
+-keep class cn.netin.launcher.LauncherActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:97
+-keep class cn.netin.launcher.ManageSpaceActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:150
+-keep class cn.netin.launcher.MenuActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:132
+-keep class cn.netin.launcher.PasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:101
+-keep class cn.netin.launcher.RestActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:138
+-keep class cn.netin.launcher.SettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:111
+-keep class cn.netin.launcher.WallpaperChooser { <init>(...); }
+
+# view land\res/layout-land/launcher.xml #generated:8
+# view port\res/layout-port/launcher.xml #generated:8
+# view res/layout/main0.xml #generated:8
+-keep class cn.netin.launcher.Workspace { <init>(...); }
+
+# view land\res/layout-land/launcher.xml #generated:125
+# view port\res/layout-port/launcher.xml #generated:125
+# view res/layout/main0.xml #generated:28
+-keep class cn.netin.launcher.WorkspaceIndicator { <init>(...); }
+
+# view AndroidManifest.xml #generated:166
+-keep class cn.netin.launcher.installer.InstallActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:263
+-keep class cn.netin.launcher.provider.AppProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:259
+-keep class cn.netin.launcher.provider.ParentalProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:278
+-keep class cn.netin.launcher.receiver.LauncherStateReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:215
+-keep class cn.netin.launcher.service.AIService { <init>(...); }
+
+# view AndroidManifest.xml #generated:229
+-keep class cn.netin.launcher.service.AppStatService { <init>(...); }
+
+# view AndroidManifest.xml #generated:250
+-keep class cn.netin.launcher.service.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:222
+-keep class cn.netin.launcher.service.MediaService { <init>(...); }
+
+# view AndroidManifest.xml #generated:243
+-keep class cn.netin.launcher.service.RemoteService { <init>(...); }
+
+# view AndroidManifest.xml #generated:236
+-keep class cn.netin.launcher.service.WtsService { <init>(...); }
+
+# view AndroidManifest.xml #generated:320
+-keep class cn.netin.parentalcontrol.AppManagerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:305
+-keep class cn.netin.parentalcontrol.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:291
+-keep class cn.netin.parentalcontrol.PasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:312
+-keep class cn.netin.parentalcontrol.ProtectionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:333
+-keep class cn.netin.parentalcontrol.RestTimeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:327
+-keep class cn.netin.parentalcontrol.UsageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:340
+-keep class cn.netin.parentalcontrol.WebAccessActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:161
+-keep class cn.netin.wifisetting.MainActivity { <init>(...); }
+
+# view res/layout/activity_wifi_setting.xml #generated:9
+-keep class cn.netin.wifisetting.PullRefreshListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:71
+-keep class com.hanceedu.common.HanceApplication { <init>(...); }
+
+# view res/layout/page_board.xml #generated:5
+-keep class com.hanceedu.common.widget.Keys { <init>(...); }
+
+# view res/layout/page_pageable_activity.xml #generated:5
+-keep class com.hanceedu.common.widget.PageControl { <init>(...); }
+
+# onClick hdpi-v4\res/layout-hdpi-v4/main.xml #generated:21
+# onClick land\res/layout-land/launcher.xml #generated:22
+# onClick land\res/layout-land/launcher.xml #generated:34
+# onClick land\res/layout-land/launcher.xml #generated:57
+# onClick land\res/layout-land/launcher.xml #generated:68
+# onClick land\res/layout-land/launcher.xml #generated:89
+# onClick land\res/layout-land/portal.xml #generated:15
+# onClick land\res/layout-land/portal.xml #generated:24
+# onClick land\res/layout-land/portal.xml #generated:34
+# onClick land\res/layout-land/portal.xml #generated:45
+# onClick land\res/layout-land/portal.xml #generated:58
+# onClick land\res/layout-land/portal.xml #generated:6
+# onClick land\res/layout-land/portal.xml #generated:80
+# onClick land\res/layout-land/portal.xml #generated:89
+# onClick land\res/layout-land/portal.xml #generated:98
+# onClick land\res/layout-land/room_xl.xml #generated:102
+# onClick land\res/layout-land/room_xl.xml #generated:113
+# onClick land\res/layout-land/room_xl.xml #generated:123
+# onClick land\res/layout-land/room_xl.xml #generated:18
+# onClick land\res/layout-land/room_xl.xml #generated:27
+# onClick land\res/layout-land/room_xl.xml #generated:36
+# onClick land\res/layout-land/room_xl.xml #generated:62
+# onClick land\res/layout-land/room_xl.xml #generated:7
+# onClick land\res/layout-land/room_xl.xml #generated:90
+# onClick port\res/layout-port/launcher.xml #generated:113
+# onClick port\res/layout-port/launcher.xml #generated:24
+# onClick port\res/layout-port/launcher.xml #generated:36
+# onClick port\res/layout-port/launcher.xml #generated:59
+# onClick port\res/layout-port/launcher.xml #generated:70
+# onClick port\res/layout-port/portal.xml #generated:15
+# onClick port\res/layout-port/portal.xml #generated:24
+# onClick port\res/layout-port/portal.xml #generated:33
+# onClick port\res/layout-port/portal.xml #generated:46
+# onClick port\res/layout-port/portal.xml #generated:58
+# onClick port\res/layout-port/portal.xml #generated:6
+# onClick port\res/layout-port/portal.xml #generated:67
+# onClick port\res/layout-port/portal.xml #generated:85
+# onClick port\res/layout-port/portal.xml #generated:95
+# onClick port\res/layout-port/room_xl.xml #generated:100
+# onClick port\res/layout-port/room_xl.xml #generated:112
+# onClick port\res/layout-port/room_xl.xml #generated:123
+# onClick port\res/layout-port/room_xl.xml #generated:133
+# onClick port\res/layout-port/room_xl.xml #generated:18
+# onClick port\res/layout-port/room_xl.xml #generated:27
+# onClick port\res/layout-port/room_xl.xml #generated:37
+# onClick port\res/layout-port/room_xl.xml #generated:63
+# onClick port\res/layout-port/room_xl.xml #generated:7
+# onClick port\res/layout-port/usage.xml #generated:18
+# onClick res/layout/act_rest_time.xml #generated:24
+# onClick res/layout/app_manager.xml #generated:103
+# onClick res/layout/app_manager.xml #generated:22
+# onClick res/layout/app_manager.xml #generated:94
+# onClick res/layout/avatar.xml #generated:18
+# onClick res/layout/avatar.xml #generated:72
+# onClick res/layout/avatar.xml #generated:83
+# onClick res/layout/main.xml #generated:21
+# onClick res/layout/menu.xml #generated:26
+# onClick res/layout/menu.xml #generated:54
+# onClick res/layout/menu_old.xml #generated:10
+# onClick res/layout/menu_old.xml #generated:22
+# onClick res/layout/menu_old.xml #generated:35
+# onClick res/layout/menu_old.xml #generated:48
+# onClick res/layout/password.xml #generated:18
+# onClick res/layout/password.xml #generated:52
+# onClick res/layout/protection.xml #generated:24
+# onClick res/layout/rest.xml #generated:25
+# onClick res/layout/rest.xml #generated:60
+# onClick res/layout/setting.xml #generated:18
+# onClick res/layout/url_item.xml #generated:18
+# onClick res/layout/usage.xml #generated:18
+# onClick res/layout/web.xml #generated:24
+# onClick res/layout/web.xml #generated:98
+-keepclassmembers class * { *** handleClick(...); }
+
+# onClick res/layout/activity_error.xml #generated:38
+# onClick res/layout/activity_error.xml #generated:49
+# onClick res/layout/activity_error.xml #generated:61
+# onClick res/layout/activity_installer_check.xml #generated:11
+# onClick res/layout/activity_main.xml #generated:27
+# onClick res/layout/activity_main.xml #generated:52
+# onClick res/layout/activity_main.xml #generated:61
+# onClick res/layout/activity_main.xml #generated:70
+# onClick res/layout/activity_main.xml #generated:79
+# onClick res/layout/titlebar_wifi.xml #generated:21
+-keepclassmembers class * { *** onClick(...); }
+

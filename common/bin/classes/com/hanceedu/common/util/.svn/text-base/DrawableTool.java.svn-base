@@ -1,0 +1,42 @@
+package hance.Bear.util;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PaintFlagsDrawFilter;
+import android.graphics.PixelFormat;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+
+public class DrawableTool {
+	/**
+	 * 改变Drawable的尺寸大小
+	 */
+	public static Drawable changeDrawableSize(Context context,
+			Drawable drawable, int destWidth, int destHeight) {
+		if (drawable == null)
+			return null;
+		destWidth = (int) UnitUtil.dip2px(context, destWidth);
+		destHeight = (int) UnitUtil.dip2px(context, destHeight);
+		int width = drawable.getIntrinsicWidth();
+		int height = drawable.getIntrinsicHeight();
+		final float ratio = (float) width / height;
+		if (width > height) {
+			destHeight = (int) (destWidth / ratio);
+		} else if (height > width) {
+			destWidth = (int) (destHeight * ratio);
+		}
+		Bitmap bitmap = Bitmap.createBitmap(destWidth, destHeight, drawable
+				.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888
+				: Bitmap.Config.RGB_565);
+
+		Canvas canvas = new Canvas(bitmap);
+		canvas.setDrawFilter(new PaintFlagsDrawFilter(Paint.DITHER_FLAG, 0));
+		drawable.setBounds(0, 0, destWidth, destHeight);
+		drawable.draw(canvas);
+		drawable =null;
+		return new BitmapDrawable(bitmap);
+		
+	}
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_cloud" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/h1_pc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/usage_report" />
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:onClick="handleClick"
+        android:src="@drawable/button_close" />
+
+  
+    <RadioGroup
+        android:id="@+id/dateButtonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" >
+
+        <RadioButton
+            android:id="@+id/navi1"
+            style="@style/navi_start"
+            android:text="Aug 10" />
+
+        <RadioButton
+            android:id="@+id/navi2"
+            style="@style/navi"
+            android:text="Aug 11" />
+
+        <RadioButton
+            android:id="@+id/navi3"
+            style="@style/navi"
+            android:text="Aug 12" />
+
+        <RadioButton
+            android:id="@+id/navi4"
+            style="@style/navi"
+            android:text="Aug 13" />
+
+        <RadioButton
+            android:id="@+id/navi5"
+            style="@style/navi"
+            android:text="Aug 14" />
+
+        <RadioButton
+            android:id="@+id/navi6"
+            style="@style/navi"
+            android:text="Aug 15" />
+
+        <RadioButton
+            android:id="@+id/navi7"
+            style="@style/navi_end"
+            android:text="Aug 16" />
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/title"
+        android:layout_below="@+id/closeButton"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/dayButton"
+            style="@style/radioButton"
+            android:background="@drawable/button_day"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/weekButton"
+            style="@style/radioButton"
+            android:background="@drawable/button_week" />
+
+        <RadioButton
+            android:id="@+id/monthButton"
+            style="@style/radioButton"
+            android:background="@drawable/button_month" />
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/radioGroup1"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_pad"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/div_grey" >
+    </ListView>
+
+</RelativeLayout>
