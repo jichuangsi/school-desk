@@ -15,7 +15,7 @@ public class PasswordCreator {
 	
 	private static void create() {
 		
-		String pass = "xly424" ;
+		String pass = "jcs930";//"xly424" ;
 		byte[] ens = StrEncoder.encode(pass) ;
 		System.out.println(StrEncoder.bytes2HexStr(ens));
 		
