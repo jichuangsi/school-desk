@@ -103,9 +103,10 @@ public class LauncherActivity extends FullScreenActivity {
 		Constants.FLAT_STYLE = false ; 
 		Constants.HAS_PORTAL = true ; 
 		Constants.AVATAR_ALLOWED = false ;
-		//xly424 用JavaTest项目生成
+		//jcs930 用PasswordGenrator项目生成
 		Constants.PASS = new byte[]  
-				{(byte)0x1A, (byte)0x0E, (byte)0x1B, (byte)0x56, (byte)0x50, (byte)0x56 } ;	
+				//{(byte)0x1A, (byte)0x0E, (byte)0x1B, (byte)0x56, (byte)0x50, (byte)0x56 } ;	
+				{(byte)0x08, (byte)0x01, (byte)0x11, (byte)0x5B, (byte)0x51, (byte)0x52 };
 
 		mContext = this;
 		ActivityBridge.init(this);

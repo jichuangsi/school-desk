@@ -10,8 +10,8 @@
         android:layout_height="209dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="200dp"
         android:onClick="handleClick"
         android:src="@drawable/xl_promote" />
 
@@ -31,6 +31,7 @@
         
         android:layout_alignTop="@+id/promoteView"
         android:layout_toRightOf="@+id/promoteView"
+        android:layout_marginLeft="60dp"
         android:onClick="handleClick"
         android:src="@drawable/xl_homework" />
     
@@ -49,21 +50,21 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spaceView"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp" >
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="-30dp" >
 
         <ImageView
             android:id="@+id/slide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="530dp"
+            android:layout_height="509dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/board" />
 
         <ImageView
             android:id="@+id/classView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="546dp"
+            android:layout_height="525dp"
             android:onClick="handleClick"
             android:src="@drawable/frame2" />
         
@@ -73,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="120dp"
             android:src="@drawable/room_class_label" />
         
     </FrameLayout>

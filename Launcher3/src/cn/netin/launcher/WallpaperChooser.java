@@ -108,7 +108,7 @@ public class WallpaperChooser extends Activity implements AdapterView.OnItemSele
         final Resources resources = getResources();
         final String packageName = getApplication().getPackageName();
 
-        addWallpapers(resources, packageName, R.array.wallpapers);
+        //addWallpapers(resources, packageName, R.array.wallpapers);
      
     }
 

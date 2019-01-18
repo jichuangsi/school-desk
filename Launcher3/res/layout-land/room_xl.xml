@@ -10,8 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginLeft="106dp"
+        android:layout_marginTop="190dp"
         android:onClick="handleClick"
         android:src="@drawable/xl_promote" />
 
@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/promoteView"
         android:layout_toRightOf="@+id/promoteView"
+        android:layout_marginLeft="60dp"
         android:onClick="handleClick"
         android:src="@drawable/xl_homework" />
 
@@ -48,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/homeworkView"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="40dp"
         android:layout_toRightOf="@+id/homeworkView" >
 
         <ImageView

@@ -45,6 +45,8 @@ public class Controller  {
 	private boolean mReload = false ;
 
 	/********* xly ************/
+	private static final String JCS_APK = "http://www.jichuangsi.com/download/x/x.apk";
+	
 	private static final String MAIN_PAGE_PREFIX = "main/indexPage?tab=";
 
 	/**
@@ -304,30 +306,34 @@ public class Controller  {
 			
 		else if (id == R.id.classView) {
 			//cmp=net.xuele.wisdom.xuelewisdom/.ui.LoginActivity u=0} from pid 480
-			boolean ret = startPackage("net.xuele.wisdom.xuelewisdom") ;
+			//boolean ret = startPackage("net.xuele.wisdom.xuelewisdom") ;
+			//boolean ret = startPackage("com.example.tangdao.gcharms1") ;
+			boolean ret = startPackage("com.example.tangdao.gcharms1") ;
 			if (!ret){
 				Toast.makeText(mContext, "请先下载安装相关Apk", Toast.LENGTH_LONG).show();
-				downloadApk("http://m.xueleyun.com/download/smartclass/android") ;
+				//downloadApk("http://m.xueleyun.com/download/smartclass/android") ;
+				//downloadApk(JCS_APK) ;
 			}
 		} 
 		else if (id == R.id.promoteView) {
-			openXl(URI_IMPROVE_SCORE) ;
+			//openXl(URI_IMPROVE_SCORE) ;
+			openXl("/studentenquiry") ;
 		} 
 		else if (id == R.id.homeworkView) {
-			openXl(URI_HOME_WORK) ;
+			openXl("/studentIndex") ;
 		} 
 		else if (id == R.id.tutorView) {
-			openXl(URI_SMART_COACH) ;
+			openXl("/mistakescollection") ;
 		} 
 		else if (id == R.id.spaceView) {
-			openXl(URI_SPACE) ;
+			openXl("/myShow") ;
 		} 
 		else if (id == R.id.messageView) {
 
-			openXl(URI_MESSAGE) ;
+			openXl("/studentIndex") ;
 		} 
 		else if (id == R.id.profileView) {
-			openXl(URI_MY_INFO) ;
+			openXl("/studentIndex") ;
 		} 
 	}
 
@@ -337,18 +343,20 @@ public class Controller  {
 	 * @param context
 	 * @param mode
 	 */
-	public void openXl(String mode) {
+	public void openXl(String mode) {		
+		//Toast.makeText(mContext, "该功能暂没开启，请敬请期待！", Toast.LENGTH_LONG).show();
 		Intent intent = new Intent();
-		ComponentName cn = new ComponentName("net.xuele.xuelets", "net.xuele.xuelets.utils.RouteDeliverActivity");
+		//ComponentName cn = new ComponentName("net.xuele.xuelets", "net.xuele.xuelets.utils.RouteDeliverActivity");
+		ComponentName cn = new ComponentName("com.example.tangdao.gcharms1", "com.example.tangdao.gcharms1.RouteDeliverActivity");		
 		intent.setComponent(cn);
-		intent.setData(Uri.parse(mode));
+		intent.setData(mode==null?null:Uri.parse(mode));
 		intent.setAction("android.intent.action.MAIN");
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		try{
 			mContext.startActivity(intent);
 		}catch(Exception e){
 			Toast.makeText(mContext, "请先下载安装相关Apk", Toast.LENGTH_LONG).show();
-			downloadApk("http://m.xueleyun.com/download/android") ;
+			//downloadApk(JCS_APK) ;
 		}
 	}
 
