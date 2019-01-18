@@ -70,7 +70,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	private void insertDefaults(SQLiteDatabase db) {	
 		String sql ;
 		
-		sql = "INSERT INTO "
+		/*sql = "INSERT INTO "
 				+ TABLE_WEB_ACCESS_URL
 				+ " VALUES ( NULL, '学乐云教学平台', 'http://www.xueleyun.com' "		
 				+ ");" ;	
@@ -90,7 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				+ TABLE_WEB_ACCESS_URL
 				+ " VALUES ( NULL, '学乐云官网', 'http://*.xueleyun.cn' "		
 				+ ");" ;	
-		db.execSQL(sql) ;
+		db.execSQL(sql) ;*/
 
 
 		/*
