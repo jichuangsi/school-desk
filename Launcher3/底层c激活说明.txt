@@ -1,0 +1,17 @@
+
+1) 将external_libs文件夹复制到Launcher3项目根目录
+2）替换Android.mk
+3) 修改 launcher.c :
+
+	a) 增加一个定义：
+	
+	//授权服务器地址
+   #define AUTH_URL "http://auth.netin.cn:8082/Bxb"
+   
+   b)在int launcher_init(void) 函数中开头增加一行：
+   	
+   	//设定网络授权服务器地址
+	net_setUrl(AUTH_URL) ;
+
+   
+   
